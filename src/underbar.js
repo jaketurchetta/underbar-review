@@ -1,4 +1,4 @@
- (function() {
+(function() {
   'use strict';
 
   window._ = {};
@@ -44,7 +44,7 @@
     if (n > array.length) {
       return array;
     }
-    return array.slice(array.length-n);
+    return array.slice(array.length - n);
   };
 
   // Call iterator(value, key, collection) for each element of collection.
@@ -55,11 +55,11 @@
   _.each = function(collection, iterator) {
     if (Array.isArray(collection)) {
       for (var i = 0; i < collection.length; i++) {
-        iterator(collection[i],i,collection);
+        iterator(collection[i], i, collection);
       }
     } else {
       for (var i in collection) {
-        iterator(collection[i],i,collection);
+        iterator(collection[i], i, collection);
       }
     }
   };
@@ -176,7 +176,7 @@
       } else {
         accumulator = collection[0];
       }
-      for (var i = 1; i < collection.length; i++){
+      for (var i = 1; i < collection.length; i++) {
         accumulator = iterator(accumulator, collection[i]);
       }
       return accumulator;
@@ -344,7 +344,7 @@
     var timed = function() {
       return func.apply(this, args);
     };
-    setTimeout(timed,wait);
+    setTimeout(timed, wait);
   };
 
 
@@ -362,7 +362,7 @@
     var copy = array.slice(0);
     var result = [];
     for (var i = 0; i < array.length; i++) {
-      result.push(copy.splice(Math.floor(Math.random() * copy.length),1)[0]);
+      result.push(copy.splice(Math.floor(Math.random() * copy.length), 1)[0]);
     }
     return result;
   };
